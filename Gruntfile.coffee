@@ -25,22 +25,19 @@ module.exports = (grunt) ->
       two: ['test/fixtures/correct.coffee', 'test/fixtures/some.coffee']
 
     'bump': options:
-      pushTo: 'upstream'
+      pushTo: 'origin'
 
   # Load local tasks.
   grunt.loadTasks 'tasks'
 
-  grunt.loadNpmTasks 'grunt-npm'
   grunt.loadNpmTasks 'grunt-bump'
-  grunt.loadNpmTasks 'grunt-auto-release'
 
   # Default task.
   grunt.registerTask 'default', 'coffeelint'
 
   grunt.registerTask 'test', 'coffeelint'
 
-  grunt.registerTask 'release', 'Bump version, push to NPM.', (type)->
+  grunt.registerTask 'release', 'Bump version, push to NPM.', (type) ->
     grunt.task.run [
       "bump:#{type || 'patch'}"
-      'npm-publish'
     ]

@@ -1,4 +1,4 @@
-[![build status](https://secure.travis-ci.org/vojtajina/grunt-coffeelint.png)](http://travis-ci.org/vojtajina/grunt-coffeelint)
+[![build status](https://secure.travis-ci.org/Gobie/grunt-coffeelint.svg)](http://travis-ci.org/Gobie/grunt-coffeelint)
 # grunt-coffeelint
 
 **Lint your CoffeeScript with [CoffeeLint].**
@@ -7,7 +7,7 @@
 
 Install npm package, next to your project's `Gruntfile.js` file:
 
-    npm install grunt-coffeelint
+    npm install git+https://git@github.com/gobie/grunt-coffeelint.git
 
 Add this line to your project's `Gruntfile.js`:
 
